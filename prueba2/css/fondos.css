@@ -1,0 +1,123 @@
+header article ul li.ulli6 {
+	background-position: 0px -27px;
+}
+/** SECCION fondos **/
+section#fondos article {
+	border:1px solid #aaa;
+	border-radius:4px;
+	background:#000000;
+	display:inline;
+	float: left;
+	height:175px;
+	margin:6px;
+	min-height:0px;
+	min-width:0px;
+	overflow:hidden;
+	position:relative;
+	width:175px;
+}
+section#fondos article.iconos:hover {
+	opacity:0.7;
+}
+section#fondos p {
+	color:#333333;
+	display:inline !important;
+	font-family: Papyrus, fantasy;
+	font-size:35px;
+	font-style: oblique;
+	font-weight:normal;
+	float: left;
+	height:auto;
+	margin:0px;
+	padding:5px;
+	position:relative;
+	width:auto;
+}
+section#fondos p.titulo {
+	font-size:35px;
+	font-style: oblique;
+	font-weight:normal;
+	height:50px;
+	margin:0px;
+	padding:5px;
+	width:99%;
+}
+section#fondos p.titulo a{
+	display:inline;
+	float:right;
+	position:relative;
+}
+section#fondos article img {
+	display:inline;
+	float:left;
+	left:50%;
+	margin:5px 0px 0px -75px;
+	position:relative;
+	width:150px;
+}
+section#fondos ul {
+	display:inline;
+	float:left;
+	height:auto;
+	margin:0;
+	padding:0;
+	width:100%;
+}
+section#fondos ul li{
+	background-position:center center;
+	background-repeat:no-repeat;
+	border:solid 1px #ddd;
+	cursor:pointer;
+	display:inline;
+	float:left;
+	height:140px;
+	list-style:none;
+	margin:5px;
+	opacity:1;
+	padding:0;
+	position:relative;
+	width:140px;
+}
+section#fondos ul li:hover{
+	opacity:0.7;
+}
+section#fondos ul li p {
+	color:#dddddd;
+	display:inline;
+	float:right;
+	height:auto;
+	margin:100px 0 0 0;
+	padding:0;
+	position:relative;
+	width:auto;
+}
+
+
+@media screen and (max-width:950px){
+	section {
+		left:0;
+		margin:0px;
+		width:98%;
+	}
+	section#videos article.iconos {
+		height:150px;
+		width:150px;
+	}
+	section#videos table tr td{
+		height:30px;
+		max-height:40px;
+		overflow:hidden;
+	}
+}
+@media screen and (max-width:500px){
+	section#videos article.iconos {
+		height:150px;
+		margin:3px 2px;
+		width:150px;
+	}
+	section#videos table#listtabla {
+	}
+	section#videos table#listtabla tr td:eq(2) {
+		visibility: collapse;
+	}
+}

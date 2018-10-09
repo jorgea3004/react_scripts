@@ -1,0 +1,230 @@
+html {
+	margin:0;
+	padding:0;
+}
+body {
+	background:#000000;
+	color:#eeeeee;
+	margin:0;
+	padding:0;
+	text-align:left;
+}
+section {
+	display:inline;
+	float:left;
+	height:100%;
+	position:relative;
+	width:100%;
+}
+section article {
+	border:solid 1px #333333;
+	display:inline;
+	float:left;
+	height:auto;
+	position:relative;
+	width:100%;
+}
+
+section article#maingal {
+	height:auto;
+	margin:0 auto !important;
+	min-height:400px;
+	width:100%;
+}
+section article#maingal p.titulo {
+	color:#dddddd;
+	display:inline !important;
+	font-family: Papyrus, fantasy;
+	font-size:16px;
+	font-style: oblique;
+	font-weight:normal;
+	float: left;
+	height:auto;
+	margin:0px;
+	padding:5px;
+	position:relative;
+	width:99%;
+}
+section article#thmbgal {
+	height:82px;
+	text-align:center;
+}
+section article#thmbgal div#marco {
+	display:inline;
+	float:left;
+	height: 82px; /*auto;*/
+	overflow:hidden;
+	position:relative;
+	width:810px;
+}
+section article#thmbgal div#marco ul {
+	height:auto;
+	left:0px;
+	margin:0;
+	padding:0;
+	position:relative;
+	width:2000px;
+}
+section article#thmbgal div#marco ul li {
+	cursor:pointer;
+	display:inline;
+	float:left;
+	height:auto;
+	list-style:none;
+	margin:0 5px 0 5px;
+	position:relative;
+	width:80px;
+}
+section article#thmbgal div#marco ul li p {
+	color:#ffffff;
+	display:inline;
+	float:left;
+	font-size:14px;
+	font-family: Arial;
+	font-weight: bold;
+	height:auto;
+	line-height:1px;
+	margin:-10px 0 0px 0px;
+	text-align:left;
+	overflow:hidden;
+	padding:0;
+	width:100%;
+	z-index:3;
+}
+section article#thmbgal div#marco ul li img {
+	position:relative;
+	display:inline;
+	float:left;
+	height:60px;
+	padding:0;
+	width:80px;
+}
+section article#thmbgal div#marco ul li img.activo {
+	border:2px solid #aaa;
+	-moz-box-shadow: 5px 5px 5px #fff;
+	-webkit-box-shadow: 5px 5px 5px #fff;
+	box-shadow: 5px 5px 5px #fff;
+}
+section article#thmbgal div#siguiente {
+	background:url(../imgs/flecha-gris-right.png) center top no-repeat;
+	cursor:pointer;
+	display:inline;
+	float:left;
+	margin-left: 0px;
+	margin-top: 10px;
+	height:44px;
+	width:44px;
+}
+section article#thmbgal div#anterior {
+	background:url(../imgs/flecha-gris-left.png) center top no-repeat;
+	cursor:pointer;
+	display:inline;
+	float:left;
+	margin-right: 0px;
+	margin-top: 10px;
+	height:44px;
+	width:44px;
+}
+section article#thmbgal div.navega {
+	height:44px;
+	display:inline;
+	float:left;
+	margin-top:10px;
+	position:relative;
+	width:44px;
+}
+section article#maingal div {
+	display:inline;
+	float:left;
+	padding:0;
+	position:relative;
+}
+section article#maingal div.player {
+	height:375px;
+	left:50%;
+	margin:0 0 0 -250px;
+	width:500px;
+}
+section article#maingal div.player_list {
+	height:auto;
+	margin:0;
+	text-align:center;
+	width:100%;
+}
+section article#maingal div.player_list ul  {
+	display:inline;
+	float:left;
+	height:auto;
+	list-style:none;
+	left:50%;
+	margin:5px 0 0 -30px;
+	padding:0;
+	position:relative;
+	text-align:center;
+	width:auto;
+}
+section article#maingal div.player_list ul li {
+	background:#ffffff;
+	border-radius:8px;
+	cursor:pointer;
+	display:inline;
+	float:left;
+	height:17px;
+	list-style:none;
+	margin:0 5px;
+	padding:0;
+	position:relative;
+	text-align:center;
+	width:17px;
+}
+section article#maingal div.player_list ul li.activo {
+	background:yellow;
+}
+section article.paginator {
+	background:transparent;
+	border:0;
+	border-radius:4px;
+	display:inline;
+	float: left;
+	height:auto;
+	margin:0px;
+	overflow:hidden;
+	position:relative;
+	text-align:center;
+	width:100%;
+}
+section article.paginator ul {
+	display:inline;
+	float: right;
+	height:auto;
+	list-style:none;
+	margin:0px;
+	padding:0;
+	position:relative;
+	width:auto;
+}
+section article.paginator ul li {
+	display:inline;
+	float: left;
+	height:auto;
+	list-style:none;
+	margin:5px;
+	min-width:20px;
+	padding:0;
+	position:relative;
+	text-align:center;
+	width:auto;
+}
+section article.paginator ul li:hover {
+	background:#aaa;
+}
+section article.paginator ul li a {
+	color:#000000;
+	font-family: Papyrus, fantasy;
+	font-size:22px;
+	height:100%;
+	margin:0px;
+	padding:0;
+	text-decoration:none;
+	width:100%;
+}

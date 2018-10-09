@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <link rel="shortcut icon" href=">public/img/favicon.ico">
+    <link rel="icon" href="img/favicon.ico?v=1.1"> 
+    <title>iYorch </title>
+    <link rel="stylesheet" href="./css/reset.css" type="text/css">
+    <link rel="stylesheet" href="./css/styl.css" type="text/css">
+    <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,600,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <script src="https://unpkg.com/react@15/dist/react.min.js"></script>
+    <script src="https://unpkg.com/react-dom@15/dist/react-dom.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+</head>
+<body>
+    <header id="header"></header>
+    <div id="main_part_inner">
+        <div id="main_part_inner_in">
+            <h1>Mis Galerias TNT Enero 2016</h1>
+        </div>
+    </div>
+    <div id="content_inner"></div>
+    <hr class="cleanit">
+    <footer id="footer"></footer>
+    <script type="text/babel" src="./js/mainMenu.js"></script>
+    <script type="text/babel" src="./js/ourwork.js"></script>
+    <script type="text/babel" src="./js/mainFooter.js"></script>
+    <script type="text/babel">
+    var galeriasArray = [{
+        id: "1",
+        foto: "hd_res_DSCN3758.JPG",
+        link: "hd_res_DSCN3758.JPG",
+        gal: "46",
+        title: "TNT Enero 2016"
+        },
+        {
+        id: "2",
+        foto: "hd_res_DSCN3760.JPG",
+        link: "hd_res_DSCN3760.JPG",
+        gal: "46",
+        title: "TNT Noviembre 2016"
+        },
+        {
+        id: "3",
+        foto: "hd_res_DSCN3763.JPG",
+        link: "hd_res_DSCN3763.JPG",
+        gal: "46",
+        title: "TNT Febrero 2016"
+        },
+        {
+        id: "4",
+        foto: "hd_res_DSCN3765.JPG",
+        link: "hd_res_DSCN3765.JPG",
+        gal: "46",
+        title: "TNT Abril 2016"
+        }];
+class Modal extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
+  closeModal(){
+   //document.getElementById("modalBg").style.display = 'none';
+   ReactDOM.render(React.createElement("section", {},''), document.getElementById('galeriaFt'))
+  }
+
+  render() {
+    return (
+      React.createElement("section", {className:'modalBg',id:'modalBg'},
+        React.createElement("div", {className:'modal'},
+          React.createElement("div", {className:'modalOff',onClick:this.closeModal},'X'),
+          React.createElement("img", {id:'photoModal',src:this.props.link})
+        )
+      )
+    )
+  }
+}
+class CarrouselItem extends React.Component {
+  constructor(props) {
+    super(props)
+    this.handleClick = this._handleClick.bind(this, props.gal,props.foto);
+  }
+
+  propTypes: {
+    id: React.PropTypes.string.isRequired,
+    gal: React.PropTypes.string.isRequired,
+    foto: React.PropTypes.string.isRequired,
+    title: React.PropTypes.string.isRequired
+  }
+
+  componentWillReceiveProps(nextProps) {
+    this.handleClick = this._handleClick.bind(this, nextProps.gal,nextProps.foto);
+  }
+  // esta función nos sirve de base para crear nuestro `this.handleClick`
+  _handleClick(gal, foto, event) {
+    //alert(`hola ${gal} /  ${foto}`);
+    let url = "gals/"+gal+"/"+foto;
+    ReactDOM.render(<Modal link={url} />, document.getElementById('galeriaFt'))
+    event.preventDefault();
+    return false;
+  }
+
+  render() {
+    return (
+        React.createElement("div", {className:"fourths_portfolio", onClick:this.handleClick},
+          React.createElement("h4", {}, this.props.title,
+            React.createElement("br", {}),
+            React.createElement("span", {},"see detail")
+          ),
+          React.createElement("a", {href:"#"},
+            React.createElement("img", {src:"gals/"+this.props.gal+"/"+this.props.foto,alt:this.props.foto})
+          )
+        )
+    )
+  }
+}
+
+var contactItemElements = galeriasArray
+  .filter(function(contact) { return contact.foto })
+  .map(function(contact) { return React.createElement(CarrouselItem, contact) })
+
+var rootElement = React.createElement('div', {}, contactItemElements);
+
+ReactDOM.render(rootElement, document.getElementById('galeriaBd'))
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+html {
+	background:#FFF0FF;
+	margin:0;
+	padding:0;
+}
+body {
+	color:#000000;
+	font-family:Comic Sans, Comic Sans MS, cursive, arial;
+	font-size:16px;
+	font-weight:normal;
+	margin:0;
+	padding:0;
+	text-align:left;
+}
+header {
+	display:block;
+	height:auto;
+	margin:0;
+	min-height:20px;
+	padding:0;
+	position:relative;
+	width:90%;
+}
+header p {
+	height:auto;
+	margin:0;
+	padding:5px 0 15px 5px;
+	position:absolute;
+	width:100%;
+}
+section {
+	display:inline-block;
+	height:auto;
+	margin:0;
+	padding:0;
+	position:relative;
+	width:90%;
+}
+section article {
+	display:inline-block;
+	height:auto;
+	margin:0;
+	padding:0;
+	position:relative;
+	width:auto;
+}
+section article ul {
+	display:inline;
+	float: right;
+	height:auto;
+	list-style:none;
+	margin:5px 0 5px 10px;
+	padding:0;
+	position:relative;
+	width:auto;
+}
+section article ul li {
+	display:block;
+	float: left;
+	height:auto;
+	list-style:none;
+	margin:5px 0;
+	padding:0;
+	position:relative;
+	width:100%;
+}
+section article ul li.submitea {
+	background:#aaa;
+	border-radius:4px;
+	cursor:pointer;
+	font-weight:bold;
+	height:35px;
+	padding-top:15px;
+	text-align:center;
+}
+input, textarea {
+	color:#000000;
+	font-size:16px;
+	height:25px;
+	margin:5px 0;
+	padding:0;
+	width:100%;
+}
+textarea {
+	height:60px;
+}
+label {
+	color:red;
+	font-size:16px;
+	height:auto;
+	margin:0px;
+	padding:0;
+	width:100%;
+}
+section article#grax {
+	display:inline;
+	height:auto;
+	width:auto;
+}
+section article#grax p {
+	color:#333333;
+	font-size:26px;
+	height:100%;
+	text-align:center;
+	width:100%;
+}

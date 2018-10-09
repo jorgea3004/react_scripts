@@ -1,0 +1,120 @@
+body section * { display: inline; float: left; height: auto; margin: 0; padding: 0; position: relative; width: auto; }
+body section p.titulo a#videonuevo img {width: 70px;}
+body section ul {width: 100%;}
+body section ul li { border: solid 1px #aaa; height: auto; list-style: none; margin: 5px 1%; text-align: center; width: 98%; border-radius:5px; -webkit-border-radius:5px; -moz-border-radius:5px; }
+body section ul li img { border: 0; height: auto; margin: 2px; padding: 0; width: 150px;}
+body section ul li p.firstchild { font-size: 16px; }
+body section ul li p { border: 0;font-size: 14px; height: auto; margin: 5px; padding: 0; text-align:left; width: 50%;}
+body section ul li article {  height: 100%; position: absolute; right: 1%; width: 46px; } 
+body section article img.optn { border: 0;cursor: pointer; height: auto; margin: 2px; padding: 0; width: 44px;}
+body section article ul { display: none; width: 100%;}
+body section article ul li { border: 0; height: auto; list-style: none; margin: 5px 1%; text-align: center; width: 98%;	}
+body section article ul li img { border: 0; height: 40px; margin: 2px; padding: 0; width: 40px;}
+body div.popup {background: url(../imgs/bg_popup.png) center top repeat; border: 0; height: 0px; float: left; display: none; left: 0; margin: 0; padding: 0; position: absolute; top:0; width: 0px; z-index: 9; }
+body div.popup div {border-radius:5px; -webkit-border-radius:5px; -moz-border-radius:5px; border: solid 1px #aaa; height: 500px; float: left; display: block; left: 50%; margin: -250px 0 0 -300px; padding: 0; position: absolute; top:50%; width: 600px; }
+body div.popup div iframe { border: 0; display: inline;float: left; position: relative; height: 100%; width: 100%;}
+body div.popup div.close {
+	background: url(../imgs/thumb_Icon_x_sm.png) center center no-repeat;
+	cursor: pointer;
+	height: 25px;
+	float: right;
+	left: 0;
+	margin: -525px 0 0 0;
+	position: relative;
+	top: 0;
+	width: 25px;
+	z-index: 11;
+}
+body section#friends  { left: 0;margin: 0; width: 98%; }
+body section#friends fieldset { margin: 10px 0 10px 1%; width: 98%; }
+body section#friends fieldset legend { background: #FFF0FF; font-weight: bold; margin: -16px 0 0 0; }
+body section#friends form#form1 ul li { border: 0; margin-left: 5px; }
+body section#friends form#form1 ul li select {
+	color:#888;
+	margin:0 10px 5px 0;
+	min-width:100px;
+	width:auto;
+}
+body section#friends form#form1 ul li select option {
+	display: block;
+	width:100%;
+}
+body section#friends form#form1 ul li input {
+	margin:0 10px 5px 0;
+}
+body section#friends form#form1 ul li.error {
+	border: solid 4px red;
+	color: red;
+	font-size: 16px;
+	text-align: left;
+	width: 95%;
+}
+body section#friends form#form1 ul li.error p {
+	display: block;
+	text-align: left;
+	font-size: 16px;
+}
+
+body section#friends form#form1 ul li img {
+	width: 20px;
+}
+body section#friends form#form1 ul li figure {
+	background: #aaa;
+	border-radius:10px; -webkit-border-radius:10px; -moz-border-radius:10px;
+	border: solid 4px #aaa;
+	height: auto;
+	margin: 5px;
+	padding: 5px;
+	width: auto;
+
+}
+body section#friends form#form1 ul li figure img {
+	width: 160px;
+}
+body section#friends form#form1 ul li a {
+	color: #999;
+	height: auto;
+	text-align: left;
+	text-decoration: none;
+	width: auto;
+}
+body section#friends form#form1 div.altaregistro {
+	color: #fff;
+	cursor: pointer;
+	background: green;
+	border-radius:10px; -webkit-border-radius:10px; -moz-border-radius:10px;
+	border: solid 4px #aaa;
+	font-size: 25px;
+	font-weight: bold;
+	height: 40px;
+	padding-top: 10px;
+	text-align: center;
+	width: 94%;
+}
+body section#friends form#form1 div.altaregistro:active {
+	color: green;
+	background: #fff;
+}
+
+body section#dirtel  { }
+body section#dirtel ul {width: 100%;}
+body section#dirtel ul li { border: solid 1px #aaa; height: auto; list-style: none; margin: 5px 1%; text-align: center; width: 98%; border-radius:5px; -webkit-border-radius:5px; -moz-border-radius:5px; }
+body section#dirtel ul li:nth-child(odd) { background:#dddfdd; }
+body section#dirtel ul li:nth-child(even) { background:#FFF0FF; }
+body section#dirtel ul li p.firstchild { font-size: 16px; width: 60%; }
+body section#dirtel ul li p { border: 0;font-size: 14px; height: auto; margin: 1%; padding: 0; text-align:left; width: 30%;}
+body section#dirtel ul li p img { border: 0; height: auto; margin: 2px 5px; padding: 0; width: 20px;}
+
+
+@media screen and (max-width:900px){
+    body div { left: 0; margin: 0; width: auto; }
+}
+@media screen and (max-width:600px){
+    body div.popup div {left: 0%; margin-left: 0; width: 98%; }
+    body section ul li p { width: 40%;}
+}
+@media screen and (max-width:500px){
+	body section#friends form#form1 ul li input {
+		width:300px;
+	}
+}

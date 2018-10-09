@@ -1,0 +1,96 @@
+header article ul li.ulli2 {
+	background-position: 0px -27px;
+}
+/** biograph **/
+section#biograph p.titulo {
+	color:#333333;
+	display:inline !important;
+	font-family: Papyrus, fantasy;
+	font-size:35px;
+	font-style: oblique;
+	font-weight:normal;
+	float: left;
+	height:50px;
+	margin:0px;
+	padding:5px;
+	position:relative;
+	width:99%;
+}
+section#biograph article.iconos.msnm {
+	background:#ffffff;
+	cursor:pointer;
+}
+section#biograph article.iconos.msnm img {
+	display:inline;
+	float:left;
+	left:50%;
+	margin:-50px 0 0 -50px;
+	position:relative;
+	top:50%;
+}
+section#biograph article.iconos.gmail {
+	background:#ffffff;
+	cursor:pointer;
+}
+section#biograph article.iconos.gmail img {
+	display:inline;
+	float:left;
+	left:50%;
+	margin:-50px 0 0 -50px;
+	position:relative;
+	top:50%;
+}
+section#biograph article.iconos.frmsp {
+	background:#ffffff;
+	cursor:pointer;
+}
+section#biograph article.iconos.frmsp img {
+	display:inline;
+	float:left;
+	left:50%;
+	margin:-62px 0 0 -50px;
+	position:relative;
+	top:50%;
+}
+section#biograph article.iconos.message {
+	background:#ffffff;
+	cursor:pointer;
+}
+section#biograph article.iconos.message img {
+	display:inline;
+	float:left;
+	left:50%;
+	margin:-39px 0 0 -50px;
+	position:relative;
+	top:50%;
+}
+section#biograph article.iconos.fcbk {
+	background:#3b5997;
+	cursor:pointer;
+}
+section#biograph article.iconos.fcbk img {
+	display:inline;
+	float:left;
+	left:50%;
+	margin:-40px 0 0 -40px;
+	position:relative;
+	top:50%;
+}
+section#biograph article.iconos.twtr {
+	background:#ffffff;
+	cursor:pointer;
+}
+section#biograph article.iconos.twtr img {
+	display:inline;
+	float:left;
+	left:50%;
+	margin:-62px 0 0 -50px;
+	position:relative;
+	top:50%;
+}
+/*****/
+@media screen and (max-width:500px){
+	section#biograph article.iconos p {
+		font-size:12px;
+	}
+}

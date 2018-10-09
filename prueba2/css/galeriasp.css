@@ -1,0 +1,260 @@
+/*html { overflow-y:hidden; }*/
+header article ul li.ulli3 {
+	background-position: 0px -27px;
+}
+/** SECCION GALERIAS **/
+section#galerias article {
+	border:1px solid #aaa;
+	border-radius:4px;
+	background:#cccccc;
+	display:inline !important;
+	float: left;
+	height:175px;
+	margin:5px;
+	min-height:150px;
+	min-width:150px;
+	overflow:hidden;
+	position:relative;
+	width:175px;
+}
+section#galerias article:hover {
+	opacity:0.7;
+}
+section p.titulo {
+	color:#333333;
+	display:inline !important;
+	font-family: Papyrus, fantasy;
+	font-size:35px;
+	font-style: oblique;
+	font-weight:normal;
+	float: left;
+	height:50px;
+	margin:0px;
+	padding:5px 0;
+	position:relative;
+	width:100%;
+}
+/*****/
+
+/** Sub Galerias**/
+section#galeriasp article.iconos.galspop {
+	height:auto;
+	margin:0;
+	padding:0;
+	width:100%;
+}
+section#galeriasp article:hover {
+	opacity:1;
+}
+section#galeriasp article.vplayer {
+	border:0;
+	border-radius:4px;
+	background:#000000;
+	display:inline;
+	float: left;
+	height:0px;
+	margin:0px 0 5px 0;
+	min-height:0px;
+	overflow:hidden;
+	position:relative;
+	text-align: center;
+	width:100%;
+}
+section#galeriasp article.vplayer ul {
+	display:inline-block;
+	height:auto;
+	margin: 0;
+	max-width:500px;
+	min-width:300px;
+	padding:0;
+	position:relative;
+	width:auto;
+	z-index:0;
+}
+section#galeriasp article.vplayer ul li {
+	display:inline;
+	float: left;
+	height:auto;
+	list-style:none;
+	margin:0px;
+	padding:0;
+	position:relative;
+	text-align:center;
+	width:auto;
+	z-index:0;
+}
+section#galeriasp article.vplayer ul li.iback {
+	background: url(../imgs/flecha-gris-left.png) left center no-repeat;
+	cursor:pointer;
+	display:inline;
+	height:100%;
+	left:0;
+	margin:0;
+	padding:0;
+	position:absolute;
+	width:50%;
+	z-index:2;
+}
+section#galeriasp article.vplayer ul li.iback img {
+	display:inline;
+	float:left;
+	left:0;
+	margin:-22px 0 0 -22px;
+	padding:0;
+	position:relative;
+	top:50%;
+}
+section#galeriasp article.vplayer ul li.inext {
+	background: url(../imgs/flecha-gris-right.png) right center no-repeat;
+	cursor:pointer;
+	display:inline;
+	height:100%;
+	left:50%;
+	margin:0;
+	padding:0;
+	position:absolute;
+	width:50%;
+	z-index:2;
+}
+section#galeriasp article.vplayer ul li.inext img {
+	display:inline;
+	float:right;
+	right:0;
+	margin:-22px -22px 0 0;
+	padding:0;
+	position:relative;
+	top:50%;
+}
+
+section#galeriasp article.vplayer ul li.iframs {
+	background:#000;
+	border:0;
+	display:inline;
+	float: left;
+	height:auto;
+	margin-top:0;
+	min-width:300px;
+	max-width:500px;
+	overflow:hidden;
+	position:relative;
+	width:auto;
+}
+section#galeriasp article.vplayer ul li.iframs img {
+	border:0;
+	display:none;
+	float: left;
+	height:auto;
+	margin:0px;
+	overflow:hidden;
+	position:relative;
+	width:auto;
+}
+
+section#galeriasp article.iconos.galspop ul {
+	display:inline;
+	float: left;
+	height:auto;
+	list-style:none;
+	margin:0px;
+	padding:0;
+	position:relative;
+	width:auto;
+}
+section#galeriasp article.iconos.galspop ul li {
+	background:#000;
+	cursor:pointer;
+	display:inline;
+	float: left;
+	height:80px;
+	list-style:none;
+	margin:7px;
+	overflow:hidden;
+	padding:0;
+	position:relative;
+	text-align:center;
+	width:80px;
+}
+section#galerias article.paginator ,section#galeriasp article.paginator {
+	background:transparent;
+	border:0;
+	border-radius:4px;
+	display:inline;
+	float: left;
+	height:auto;
+	margin:0px;
+	overflow:hidden;
+	position:relative;
+	text-align:center;
+	width:100%;
+}
+section#galerias article.paginator ul, section#galeriasp article.paginator ul {
+	display:inline;
+	float: right;
+	height:auto;
+	list-style:none;
+	margin:0px;
+	padding:0;
+	position:relative;
+	width:auto;
+}
+section#galerias article.paginator ul li, section#galeriasp article.paginator ul li {
+	display:inline;
+	float: left;
+	height:auto;
+	list-style:none;
+	margin:5px;
+	min-width:20px;
+	padding:0;
+	position:relative;
+	text-align:center;
+	width:auto;
+}
+section#galerias article.paginator ul li:hover, section#galeriasp article.paginator ul li:hover {
+	background:#aaa;
+}
+section#galerias article.paginator ul li a, section#galeriasp article.paginator ul li a {
+	color:#000000;
+	font-family: Papyrus, fantasy;
+	font-size:22px;
+	height:100%;
+	margin:0px;
+	padding:0;
+	text-decoration:none;
+	width:100%;
+}
+@media screen and (max-width:950px){
+	section article.iconos{
+		border:solid #000 0px;
+	}
+}
+@media screen and (max-width:500px){
+	section#galeriasp {
+		margin:0px;
+		padding:0;
+		width:100%;
+	}
+	section#galerias article.iconos {
+		height:140px;
+		margin:3px 2px;
+		width:140px;
+	}
+	section#galeriasp article.vplayer ul {
+		left:0;
+		width:100%;
+	}
+	section#galeriasp article.vplayer ul li.iframs {
+		height:auto;
+		width:100%;
+	}
+	section#galeriasp article.vplayer ul li.iframs img {
+		height:auto;
+		width:100%;
+	}
+	section#galeriasp article.iconos.galspop ul li {
+		cursor:pointer;
+		margin:0px;
+	}
+	section#galeriasp article.iconos.galspop ul li:hover {
+		opacity:0.8;
+	}
+}

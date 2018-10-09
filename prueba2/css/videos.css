@@ -1,0 +1,161 @@
+header article ul li.ulli4 {
+	background-position: 0px -27px;
+}
+/** SECCION VIDEOS **/
+section#videos article {
+	border:1px solid #aaa;
+	border-radius:4px;
+	background:#000000;
+	display:inline;
+	float: left;
+	height:175px;
+	margin:6px;
+	min-height:0px;
+	min-width:0px;
+	overflow:hidden;
+	position:relative;
+	width:175px;
+}
+section#videos article.iconos:hover {
+	opacity:0.7;
+}
+section#videos p.titulo {
+	color:#333333;
+	display:inline !important;
+	font-family: Papyrus, fantasy;
+	font-size:35px;
+	font-style: oblique;
+	font-weight:normal;
+	float: left;
+	height:50px;
+	margin:0px;
+	padding:5px;
+	position:relative;
+	width:99%;
+}
+section#videos p.titulo a{
+	display:inline;
+	float:right;
+	position:relative;
+}
+section#videos article img {
+	display:inline;
+	float:left;
+	left:50%;
+	margin:5px 0px 0px -75px;
+	position:relative;
+	width:150px;
+}
+section#videos article.vplayer {
+	border:0;
+	border-radius:4px;
+	background:#000000;
+	display:inline;
+	float: left;
+	height:0px;
+	margin:0px;
+	overflow:hidden;
+	position:relative;
+	width:100%;
+}
+section#videos article.vplayer div.iframs {
+	background:url(../imgs/barras-de-television-colores.jpg) center top no-repeat;
+	border:0;
+	display:inline;
+	float: left;
+	height:380px;
+	left:50%;
+	margin:10px 10px 10px -300px;
+	overflow:hidden;
+	position:relative;
+	width:600px;
+}
+section#videos article.vplayer div.iframs iframe {
+	border:0;
+	display:inline;
+	float: left;
+	height:381px;
+	margin:0px;
+	overflow:hidden;
+	position:relative;
+	width:601px;
+}
+/*****/
+section#videos article.paginator {
+	background:transparent;
+	border:0;
+	border-radius:4px;
+	display:inline;
+	float: left;
+	height:auto;
+	margin:0px;
+	overflow:hidden;
+	position:relative;
+	text-align:center;
+	width:100%;
+}
+section#videos article.paginator ul {
+	display:inline;
+	float: right;
+	height:auto;
+	list-style:none;
+	margin:0px;
+	padding:0;
+	position:relative;
+	width:auto;
+}
+section#videos article.paginator ul li {
+	display:inline;
+	float: left;
+	height:auto;
+	list-style:none;
+	margin:5px;
+	min-width:20px;
+	padding:0;
+	position:relative;
+	text-align:center;
+	width:auto;
+}
+section#videos article.paginator ul li:hover {
+	background:#aaa;
+}
+section#videos article.paginator ul li a {
+	color:#000000;
+	font-family: Papyrus, fantasy;
+	font-size:22px;
+	height:100%;
+	margin:0px;
+	padding:0;
+	text-decoration:none;
+	width:100%;
+}
+
+
+@media screen and (max-width:950px){
+	section {
+		left:0;
+		margin:0px;
+		width:98%;
+	}
+	section#videos article.iconos {
+		height:150px;
+		width:150px;
+	}
+	section#videos table tr td{
+		height:30px;
+		max-height:40px;
+		overflow:hidden;
+	}
+}
+@media screen and (max-width:500px){
+	section#videos article.iconos {
+		height:150px;
+		margin:3px 2px;
+		width:150px;
+	}
+	section#videos table#listtabla {
+	}
+	section#videos table#listtabla tr td:eq(2) {
+		visibility: collapse;
+	}
+}
