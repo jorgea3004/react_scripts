@@ -1,0 +1,92 @@
+html body,
+html body #wrapper,
+html body #app {
+	display: inline;
+	float: left;
+	height: 100%;
+	position: relative;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+#app {
+	background: #d3d3d3;
+}
+#app #wrapper header,
+#app #wrapper footer {
+	background: #f3f3f3;
+	display: inline;
+	float: left;
+	height: 25px;
+	position: absolute;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+#app #wrapper header {
+	top: 0;
+}
+#app #wrapper footer {
+	bottom: 0;
+}
+header ul.menuRg,
+header ul.menuLeft {
+	display: inline;
+	float: right;
+	height: 20px;
+	margin: 2px 10px 2px 2px;
+	padding: 0;
+	position: relative;
+	width: auto;
+}
+header ul.menuRg,
+header ul.menuRg li,
+header ul.menuLeft li,
+header ul.menuLeft {
+	display: inline;
+	float: right;
+	height: 20px;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	width: 20px;
+}
+header ul.menuRg {
+	margin: 2px 10px 0 2px;
+}
+header ul.menuLeft {
+	margin: 2px 0 0 10px;
+}
+header ul.menuLeft li a img,
+header ul.menuRg li a img {
+	height: 20px;
+	margin: 0;
+	padding: 0;
+	width: 20px;
+}
+header ul.menuLeft {
+	float: left;
+	margin: 2px 2px 2px 10px;
+	width: auto;
+}
+@media screen and (max-width:480px) {
+	#app #wrapper header,
+	#app #wrapper footer {
+		height: 35px;
+	}
+	header ul.menuRg,
+	header ul.menuLeft,
+	header ul.menuLeft li,
+	header ul.menuLeft li a,
+	header ul.menuLeft li a img,
+	header ul.menuRg li,
+	header ul.menuRg li a,
+	header ul.menuRg li a img {
+		height: 30px;
+		width: 30px;
+	}
+	header ul.menuLeft {
+		margin-left: 5px;
+	}
+}

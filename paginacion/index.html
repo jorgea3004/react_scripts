@@ -1,0 +1,144 @@
+<html>
+<head>
+	<title>Paginacion React</title>
+</head>
+<body>
+	<div id='pagination'></div>
+	<script type="text/babel">
+class Paginador extends React.Component {
+  state = {
+    url:'',
+    aditionalItems: 0,
+    totalPages: 10,
+    itemsPaged: 10,
+    currentPage: 1,
+    limit:2,
+    finalArray: []
+  }
+  constructor(props) {
+    super(props)
+    this.handleClick = this.handleClick.bind(this);
+  }
+  handleClick(event){
+      const target = event.target;
+      const value = target.id;
+    let elementos = this.getPaging(this.state.url,this.state.aditionalItems, this.state.totalPages,this.state.itemsPaged,value,this.state.limit);
+    this.setState({currentPage:value, finalArray: elementos });
+    return false;
+  }
+  componentDidMount() {
+    this.setState({
+      url: this.props.url,
+      totalPages: this.props.total,
+      currentPage: this.props.actual
+    })
+    let elementos = this.getPaging(this.state.url,this.state.aditionalItems, this.state.totalPages,this.state.itemsPaged,this.state.currentPage,this.state.limit);
+    this.setState({ finalArray: elementos }); 
+  }
+  getPaging(url,aditionalItems, totalPages,itemsPaged,currentPage,limit) {
+    let pages = new Array(),init = 1, end = 1, previousPage=[], nextPage=[], arraypg = [];
+    if(totalPages <= itemsPaged) {
+      for(let i=1; i<=totalPages; i++){
+        pages.push(this.getPage(url,i,currentPage));
+      }
+    }
+    else if(currentPage == 1) {
+      for(let i=1; i<=itemsPaged; i++){
+        pages.push(this.getPage(url,i,currentPage));
+      }
+      pages.push(['','...','']);
+      pages.push(this.getPage(url,totalPages,currentPage));
+    }
+    else if(currentPage == totalPages) {
+      limit = parseInt(parseInt(totalPages) - parseInt(parseInt(itemsPaged) - 1));
+      pages.push(this.getPage(url,1,currentPage));
+      pages.push(['','...','']);
+      for(let i=limit; i<=totalPages; i++){
+        pages.push([url,i,i]);
+      }
+    }
+    else if((itemsPaged+1)==totalPages) {
+      pages.push(this.getPage(url,1,currentPage));
+      pages.push(['','...','']);
+      for(let i=2; i<=totalPages; i++){
+        pages.push([url,i,i]);
+      }
+    }
+    else if(currentPage < totalPages && currentPage > 1) {
+      aditionalItems = parseInt(itemsPaged/2);
+      init = currentPage - aditionalItems;
+      if(init <= 1) {
+        init = 2;
+        end = parseInt(itemsPaged) + 1;
+      } else {
+        end = parseInt(currentPage) + parseInt(aditionalItems);
+      }
+      if(end >= totalPages) { 
+        end = parseInt(totalPages) - 1;
+        init = parseInt(end) - parseInt(parseInt(itemsPaged) - 1);
+      }
+      pages.push(this.getPage(url,1,currentPage));
+      pages.push(['','...','']);
+      for(let i=(init); i<=end; i++){
+        pages.push(this.getPage(url,i,currentPage));
+      }
+      pages.push(['','...','']);
+      pages.push(this.getPage(url,totalPages,currentPage));
+    }
+    if(currentPage > 1){
+      let urlp = url+"/"+((currentPage > 1) ? parseInt(currentPage-1) : 1);
+      previousPage.push(urlp,' << ',((currentPage > 1) ? parseInt(parseInt(currentPage)-1) : 1));
+    }
+    if(currentPage < totalPages){
+      let urln = url+'/'+((currentPage < totalPages) ? (parseInt(currentPage+1)) : totalPages);
+      nextPage.push(urln,' >> ', ((currentPage < totalPages) ? (parseInt(parseInt(currentPage)+1)) : totalPages));
+    }
+    if (previousPage.length>0) {arraypg.push(previousPage);}
+    for (var i = 0; i < pages.length; i++) {
+      arraypg.push(pages[i]);
+    };
+    if (nextPage.length>0) {arraypg.push(nextPage);}
+    return arraypg;
+  }
+  getPage(url,i,currentPage) {
+    let element=new Array();
+    if (i==currentPage) {
+      element = (['', ' ['+i+'] ', '']);
+    } else {
+      let urlm = url+"/"+i;
+      element = ([urlm, i, i]);
+    }
+    return (element);
+  }
+  render() {
+    let self = this;
+    return (React.createElement('ul',{className:'pagination'},
+      this.state.finalArray.map(function(v,i){
+        if (typeof v[0] !== undefined) {
+          if (v[0].length>0) {
+            return (
+              React.createElement("li",{key:i},
+                React.createElement("a",{id:v[2],href:'#',onClick:self.handleClick},v[1])
+              )
+            )
+          } else {
+            return (
+              React.createElement("li",{key:i},v[1])
+            )
+          }
+        }
+      })
+    ))
+  }
+}
+
+ReactDOM.render(
+  <Paginador url={"#"} actual={2} total={17} />,
+  document.getElementById('pagination')
+);
+	</script>
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script crossorigin type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.js"></script>
+</body>
+</html>
